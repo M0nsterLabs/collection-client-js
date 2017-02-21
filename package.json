@@ -1,0 +1,42 @@
+{
+  "name": "collection-client-js",
+  "version": "0.0.1",
+  "description": "A JS client for collection API",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel -d dist src",
+    "release": "./node_modules/.bin/babel -d dist --compact true src",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M0nsterLabs/collection-client-js.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M0nsterLabs/collection-client-js/issues"
+  },
+  "homepage": "https://github.com/M0nsterLabs/collection-client-js#readme",
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.7",
+    "isomorphic-fetch": "^2.2.1",
+    "assert": "^1.4.1",
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

@@ -1,3 +1,4 @@
+/** global: Response */
 require('bluebird');
 require('isomorphic-fetch');
 
@@ -7,6 +8,7 @@ import Collections from "../src/index";
 import Collection from "../src/Collection";
 import Item from "../src/Item";
 import Ajax from "../src/Ajax";
+
 
 describe("sample", function () {
 	beforeEach(function () {

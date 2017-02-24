@@ -9,7 +9,8 @@
   "scripts": {
     "build": "./node_modules/.bin/babel -d dist src",
     "release": "./node_modules/.bin/babel -d dist --compact true src",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-register"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --require bluebird --require isomorphic-fetch",
+    "test:coverage": "./node_modules/.bin/istanbul cover --report clover ./node_modules/.bin/_mocha -- -u exports -R spec test/**/*  --compilers js:babel-register --require babel-polyfill --require bluebird --require isomorphic-fetch"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "sinon": "^1.17.7"
+    "sinon": "^1.17.7",
+    "istanbul": "^1.0.0-alpha"
   },
   "dependencies": {
     "lodash": "^4.17.4"
